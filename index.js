@@ -31,7 +31,7 @@ if (command == "create") {
     
   }
   fs.writeFileSync("./todo.json", JSON.stringify(todo));
-} else if (command == "delete") {
+} else if (command == "deleteTask") {
   let todo = JSON.parse(fs.readFileSync("./todo.json", "utf8"));
   let [, , , title] = process.argv;
   for (var i = 0; i < todo.length; i++) {
